@@ -1,0 +1,9 @@
+{
+  "name": "scalajs-io",
+  "version": "7.4.0",
+  "private": true,
+  "dependencies": {
+    "bignum": "^0.12.5",
+    "source-map": "^0.5.6"
+  }
+}
