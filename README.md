@@ -1,8 +1,12 @@
 Bignum API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [Bignum](https://www.npmjs.com/package/bignum)
+[bignum](https://www.npmjs.com/package/bignum) - An arbitrary-precision integer arithmetic using OpenSSL.
 
-An arbitrary-precision integer arithmetic using OpenSSL.
+#### Description
+
+This library is based on node-bigint by substack, but instead of using libgmp, it uses the builtin bignum 
+functionality provided by OpenSSL. The advantage is that OpenSSL is already part of Node.js, so this library 
+does not add any external dependency whatsoever.
 
 #### Build Requirements
 
@@ -32,16 +36,14 @@ $ sbt test
 
 #### Examples
 
-Given the following values:
-
-```scala
-val v1 = "782910138827292261791972728324982"
-val v2 = "182373273283402171237474774728373"
-```
-
 You can perform math functions via built-in methods:
 
 ```scala
+import io.scalajs.npm.bignum._
+
+val v1 = "782910138827292261791972728324982"
+val v2 = "182373273283402171237474774728373"
+
 val b = new BigNum(v1).add(500).sub(v2).div(8)
 // b.toString == "75067108192986261319312244199638"
 ```
@@ -49,6 +51,11 @@ val b = new BigNum(v1).add(500).sub(v2).div(8)
 Alternatively, you can perform math functions via overloaded operators:
 
 ```scala
+import io.scalajs.npm.bignum._
+
+val v1 = "782910138827292261791972728324982"
+val v2 = "182373273283402171237474774728373"
+
 val b = (new BigNum(v1) + 500 - v2) / 8
 // b.toString == "75067108192986261319312244199638"
 ```
@@ -56,6 +63,11 @@ val b = (new BigNum(v1) + 500 - v2) / 8
 Prime number detection:
 
 ```scala
+import io.scalajs.npm.bignum._
+
+val v1 = "782910138827292261791972728324982"
+val v2 = "182373273283402171237474774728373"
+
 for {
     n <- 0 to 100
     p = BigNum.pow(2, n) - 1 if p.probPrime(50)
@@ -70,7 +82,7 @@ for {
 To add the Moment binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.12.5"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:

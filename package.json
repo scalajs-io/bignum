@@ -1,6 +1,6 @@
 {
   "name": "bignum-scalajs",
-  "version": "7.4.0",
+  "version": "0.12.5",
   "private": true,
   "dependencies": {
     "bignum": "^0.12.5",
