@@ -2,25 +2,25 @@ Bignum API for Scala.js
 ================================
 [bignum](https://www.npmjs.com/package/bignum) - An arbitrary-precision integer arithmetic using OpenSSL.
 
-#### Description
+### Description
 
 This library is based on node-bigint by substack, but instead of using libgmp, it uses the builtin bignum 
 functionality provided by OpenSSL. The advantage is that OpenSSL is already part of Node.js, so this library 
 does not add any external dependency whatsoever.
 
-#### Build Requirements
+### Build Requirements
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
 
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-#### Running the tests
+### Running the tests
 
 Before running the tests the first time, you must ensure the npm packages are installed:
 
@@ -34,7 +34,7 @@ Then you can run the tests:
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 You can perform math functions via built-in methods:
 
@@ -77,9 +77,9 @@ for {
 }
 ```
 
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
-To add the Moment binding to your project, add the following to your build.sbt:  
+To add the `BigNum` binding to your project, add the following to your build.sbt:  
 
 ```sbt
 libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.12.5"
