@@ -10,7 +10,6 @@ does not add any external dependency whatsoever.
 
 ### Build Requirements
 
-* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
 
@@ -82,7 +81,7 @@ for {
 To add the `BigNum` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.12.5"
+libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.12.5-2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
