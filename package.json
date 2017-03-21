@@ -1,6 +1,6 @@
 {
   "name": "bignum-sjs",
-  "version": "0.12.5-3",
+  "version": "0.12.5-4",
   "private": true,
   "dependencies": {
     "bignum": "^0.12.5",
