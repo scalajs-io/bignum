@@ -81,7 +81,7 @@ for {
 To add the `BigNum` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.12.5-4"
+libraryDependencies += "io.scalajs.npm" %%% "bignum" % "0.4.0-pre1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
