@@ -19,14 +19,14 @@ class BigNumTest extends FunSpec {
       val b = new BigNum(v1).add(500).sub(v2).div(8)
 
       info(s"new BigNum('$v1').add(500).sub('$v2').div(8) = $b")
-      Assert.equal(b.toString, "75067108192986261319312244199638")
+      Assert.equal(b.toString(), "75067108192986261319312244199638")
     }
 
     it("supports math functions via operators") {
       val b = (new BigNum(v1) + 500 - v2) / 8
 
       info(s"(new BigNum('$v1') + 500 - '$v2')/8 = $b")
-      Assert.equal(b.toString, "75067108192986261319312244199638")
+      Assert.equal(b.toString(), "75067108192986261319312244199638")
     }
 
     it("supports prime number detection") {
